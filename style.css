@@ -1,0 +1,77 @@
+/* Reset default margin and prevent overflow */
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    overflow: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: transparent;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensures navbar appears above the canvas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds slight shadow for visibility */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navbar Logo */
+.nav-logo {
+    color: turquoise; /* Ensures visibility against white background */
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+   
+}
+
+/* Canvas Styling */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1; /* Keeps canvas behind the navbar */
+}
+
+/* Footer Text */
+p {
+    margin: 0;
+    position: absolute;
+    font: 16px Verdana, sans-serif;
+    color: #eee;
+    height: 25px;
+    top: calc(100vh - 30px);
+    text-shadow: 0 0 2px white;
+}
+
+/* Footer Links */
+p a {
+    text-decoration: none;
+    color: #aaa;
+}
+
+span {
+    font-size: 11px;
+}
+
+p > a:first-of-type {
+    font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .nav-logo {
+        font-size: 20px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+}
